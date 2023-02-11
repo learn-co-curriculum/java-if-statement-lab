@@ -56,31 +56,37 @@ running correctly.
 You may also run the program with the IntelliJ debugger, or you can use the
 Java Visualizer.
 
-#### Rolling a Die
+#### Rock, Paper, Scissors
 
 In this section, make use of the `Random` class to simulate rolling a die.
 Remember, a die has 6 faces and each face has a number on it. The numbers range
 from 1 - 6.
+In this section, make use of the `Random` class to simulate two opponents
+playing the game rock, paper, scissors.
 
-- Use the `nextInt()` method to generate a pseudorandom `int` value from 1 - 6.
-  - Hint: Remember, a die has 6 faces. To limit the values of integers, we can
-    use something like this:
+Rock, paper, scissors is a game played between two opponents. They each play
+a different sign that represents a rock, paper, or scissors. The rules of the
+game goes as follows:
 
-    ```java
-        Random random = new Random();
-        int numberOfSides = 6;
-        int minimum = 1;    // Since 1 is the lowest number we can roll
-        int dieRoll = random.nextInt(numberOfSides) + minimum;
-    ```
+- Rock beats scissors.
+- Paper beats rock.
+- Scissor beats paper.
+- If opponents play the same sign, then it results in a tie.
 
-- Use an `if` statement to determine what number the die rolled.
-  - You _must_ tell the user what number the die landed on.
-    - If the die rolled a 1, print "We rolled a 1".
-    - If the die rolled a 2, print "We rolled a 2".
-    - If the die rolled a 3, print "We rolled a 3".
-    - If the die rolled a 4, print "We rolled a 4".
-    - If the die rolled a 5, print "We rolled a 5".
-    - If the die rolled a 6, print "We rolled a 6".
+Assume that we can represent rock as the integer `0`, paper as the integer `1`,
+and scissors as the integer `2`.
+
+- Use the `nextInt()` method to generate a pseudorandom `int` value from 0 - 2
+  inclusive to represent two opponents playing the game.
+- Use a chained conditional statement to determine what each opponent plays.
+  - You _must_ tell the user what each opponent plays.
+    - If opponent 1 plays rock, print "Opponent 1 plays rock."
+    - If opponent 1 plays paper, print "Opponent 1 plays paper."
+    - If opponent 1 plays scissors, print "Opponent 1 plays scissors."
+  - You _must_ tell the user which component won or if it was a tie.
+    - If both opponents play the same sign, print "The opponents tie!"
+    - If opponent 1 wins, print "Opponent 1 won!"
+    - If opponent 2 wins, print "Opponent 2 won!"
   - You _must_ make use of conditionals (`if` statements, `if-else` statements,
     or `if-else if-else` statements).
   - Hint: It is recommended to use a **chained conditional**. This is when we
@@ -137,21 +143,27 @@ Example Output #1:
 
 ```text
 The coin landed on tails
-We rolled a 5
+Opponent 1 played scissors.
+Opponent 2 played paper.
+Opponent 2 won!
 ```
 
 Example Output #2:
 
 ```text
 The coin landed on tails
-We rolled a 1
+Opponent 1 played paper.
+Opponent 2 played paper.
+The opponents tied!
 ```
 
 Example Output #3:
 
 ```text
 The coin landed on heads
-We rolled a 6
+Opponent 1 played paper.
+Opponent 2 played rock.
+Opponent 1 won!
 ```
 
 Remember, the output here does not have to _exactly_ match your output since we
