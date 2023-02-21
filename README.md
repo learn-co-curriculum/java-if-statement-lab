@@ -23,7 +23,7 @@ instructions below to see where your code should go.
 There are three parts to this lab:
 
 - Simulate flipping a coin.
-- Simulate rolling a die.
+- Simulate the game "Rock Paper Scissors".
 - Debugging a program.
 
 The first two parts are in `Lab.java` and the debugging part will be in the
@@ -58,9 +58,6 @@ Java Visualizer.
 
 #### Rock, Paper, Scissors
 
-In this section, make use of the `Random` class to simulate rolling a die.
-Remember, a die has 6 faces and each face has a number on it. The numbers range
-from 1 - 6.
 In this section, make use of the `Random` class to simulate two opponents
 playing the game rock, paper, scissors.
 
@@ -83,14 +80,14 @@ and scissors as the integer `2`.
     - If opponent 1 plays rock, print "Opponent 1 plays rock."
     - If opponent 1 plays paper, print "Opponent 1 plays paper."
     - If opponent 1 plays scissors, print "Opponent 1 plays scissors."
-  - You _must_ tell the user which component won or if it was a tie.
+  - You _must_ tell the user which opponent won or if it was a tie.
     - If both opponents play the same sign, print "The opponents tie!"
     - If opponent 1 wins, print "Opponent 1 won!"
     - If opponent 2 wins, print "Opponent 2 won!"
   - You _must_ make use of conditionals (`if` statements, `if-else` statements,
     or `if-else if-else` statements).
   - Hint: It is recommended to use a **chained conditional**. This is when we
-    have `if` statement, `else if` statements, and an `else` statement.
+    have an `if` statement, `else if` statements, and an `else` statement.
 
 Run the program after you finished completing the above instructions. It is
 advised you test out this program several times to ensure that all options are
@@ -167,8 +164,8 @@ Opponent 1 won!
 ```
 
 Remember, the output here does not have to _exactly_ match your output since we
-are generating pseudorandom values. But it should have similar messages with a
-coin flip landing on heads or tails and a die rolling on an integer 1-6.
+are generating pseudorandom values. But it should have similar messages regarding
+the two games.
 
 ### `BuggyLab.java` Expected Output
 
